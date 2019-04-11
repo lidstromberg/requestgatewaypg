@@ -1,6 +1,6 @@
 # Request Gateway Postgres - address restricting add-on for [auth].
 
-A Go IP address restriction backend utility which uses Postgres/ GCP CloudSQL. Intended to be used in conjunction with [auth].
+A Go IP address restriction backend utility which uses Postgres/GCP CloudSQL. Intended to be used in conjunction with [auth].
 
 ## What?
 This is a fairly rudimentary backend client which persists a list of approved address names (IPs, hostnames, whatever you want to use to differentiate), and will provide a boolean check to indicate if a given address name is on the approved list.
@@ -56,7 +56,7 @@ export GTWAYPG_SQLCNX='host={{instancename}} dbname=gateway user=gatewayuser pas
 ```
 
    [auth]: <https://github.com/lidstromberg/auth>
-   [GCP]: <https://cloud.google.com/>libraries#client-libraries-install-go>
+   [GCP]: <https://cloud.google.com/>
    [Storage Go client]: <https://cloud.google.com/storage/docs/reference/libraries#client-libraries-install-go>
    [Google Application Credentials]: <https://cloud.google.com/docs/authentication/production#auth-cloud-implicit-go>
    [examples]: <https://github.com/lidstromberg/examples>
