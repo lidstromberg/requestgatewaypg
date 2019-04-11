@@ -1,0 +1,6 @@
+################################
+# REQUEST GATEWAY PG
+################################
+export GTWAYPG_DEBUGON='true'
+export GTWAYPG_SQLDST='cloudsqlpostgres'
+export GTWAYPG_SQLCNX='host={{instancename}} dbname=gateway user=gatewayuser password={{password}} sslmode=disable'
