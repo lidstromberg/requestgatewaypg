@@ -55,6 +55,31 @@ export GTWAYPG_SQLDST='cloudsqlpostgres'
 export GTWAYPG_SQLCNX='host={{instancename}} dbname=gateway user=gatewayuser password={{password}} sslmode=disable'
 ```
 
+### Main Files
+
+| File | Purpose |
+| ------ | ------ |
+| requestgateway.go | Logic manager |
+| requestgateway_test.go | Tests |
+ 
+
+### Postgres Schema Files
+
+| File | Purpose |
+| ------ | ------ |
+| 001_dbcreate.sql | Database/User create |
+| 002_schema.sql | Database schema |
+| 003_funcs.sql | Database functions |
+
+### Ancillary Files
+
+| File | Purpose |
+| ------ | ------ |
+| config.go | Boot package parameters, environment var collection |
+| entity.go | Package structs |
+| env | Package environment variables for local/dev installation |
+| gogets | Statements for go-getting required packages |
+
    [auth]: <https://github.com/lidstromberg/auth>
    [GCP]: <https://cloud.google.com/>
    [Storage Go client]: <https://cloud.google.com/storage/docs/reference/libraries#client-libraries-install-go>

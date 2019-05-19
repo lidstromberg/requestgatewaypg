@@ -16,12 +16,12 @@ type GtwyMgr struct {
 	ds *sql.DB
 }
 
-//NewGtwyMgr creates a new gateway manager
-func NewGtwyMgr(ctx context.Context, bc lbcf.ConfigSetting) (*GtwyMgr, error) {
+//NewMgr creates a new gateway manager
+func NewMgr(ctx context.Context, bc lbcf.ConfigSetting) (*GtwyMgr, error) {
 	preflight(ctx, bc)
 
 	if EnvDebugOn {
-		lblog.LogEvent("GtwyMgr", "NewGtwyMgr", "info", "start")
+		lblog.LogEvent("GtwyMgr", "NewMgr", "info", "start")
 	}
 
 	db, err := sql.Open(bc.GetConfigValue(ctx, "EnvGtwaySqlType"), bc.GetConfigValue(ctx, "EnvGtwaySqlConnection"))
@@ -38,7 +38,7 @@ func NewGtwyMgr(ctx context.Context, bc lbcf.ConfigSetting) (*GtwyMgr, error) {
 	}
 
 	if EnvDebugOn {
-		lblog.LogEvent("GtwyMgr", "NewGtwyMgr", "info", "end")
+		lblog.LogEvent("GtwyMgr", "NewMgr", "info", "end")
 	}
 
 	return cm1, nil
